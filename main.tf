@@ -16,7 +16,7 @@ resource "digitalocean_record" "cname" {
   domain   = digitalocean_domain.this.id
   type     = "CNAME"
   name     = each.value["name"]
-  value    = each.value["domain"]
+  value    = endswith(each.value["domain"], ".") ? each.value["domain"] : "${each.value["domain"]}."
   ttl      = each.value["ttl"]
 }
 
