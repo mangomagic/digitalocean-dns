@@ -11,3 +11,5 @@ See `example` folder:
 $ terraform init
 $ terraform plan -var-file=example_com.tfvars -var do_token=$DO_TOKEN
 ```
+
+See also: generating a data structure from pre-existing Digital Ocean DNS records [here](https://github.com/mangomagic/digitalocean-dns-data).
