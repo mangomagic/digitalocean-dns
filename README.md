@@ -1,1 +1,13 @@
 # Digital Ocean DNS Terraform Module
+
+This Terraform module creates Digital Ocean DNS records from a [data structure](https://github.com/mangomagic/digitalocean-dns/blob/main/example/example_com.tfvars).
+
+Note: Terraform version >= 1.3.0 is required.
+
+See `example` folder:
+
+```
+# Set envirnoment variable DO_TOKEN with Digital Ocean access token
+$ terraform init
+$ terraform plan -var-file=example_com.tfvars -var do_token=$DO_TOKEN
+```
